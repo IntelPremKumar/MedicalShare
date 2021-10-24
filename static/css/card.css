@@ -1,0 +1,80 @@
+html,body,header,.view{
+    height: 90%;
+    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%
+}
+#video:after{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+.ig{
+    width: 45px;
+    margin-left: -350px;
+    margin-top: 10px;
+    margin-bottom: -35px; 
+    
+}
+/*nav
+.navhover:hover{
+    background: rgba(225,225,225,0.05);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(8.5px);
+    text-shadow: none !important;
+    box-sizing: border-box !important;
+    cursor: pointer !important;
+    transition: all 0.3s ease !important;
+    -webkit-transform: scale(1.2) !important;
+    -ms-transform: scale(1.2) !important;
+    transform: scale(1.2) !important;
+    z-index: 2;
+}*/
+
+.card{   
+    background: rgba(96, 96, 96, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border: 2px solid #fff;  
+   
+}
+.card:nth-child(1){
+    top: 25px;   
+    background: rgba(96, 96, 96, 0.05);
+    box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+    backdrop-filter: blur(8.5px);
+    -webkit-backdrop-filter: blur(8.5px);
+    border-radius: 10px;
+    border: 2px solid #fff; 
+}
+@media (max-width: 991px){
+    .card:nth-child(1){
+        min-height: 1020px;
+    }  
+}
+
+.content{
+    padding: 16px;
+}
+.sticky{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    z-index: 1;
+}
+.sticky + .content {
+    padding-top: 75px;
+}
+ 
+

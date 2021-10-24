@@ -1,0 +1,183 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+html,body,header,.view{
+    height: 100%;
+    
+}
+body::-webkit-scrollbar {
+    display: none;
+}
+video{
+    position: fixed;
+    right: 0;
+    bottom: 0;
+   
+    min-width: 100%;
+    min-height: 100%
+}
+#video:after{
+    position: fixed;
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+}
+body{
+    overflow-x: hidden;
+}
+section{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 180vh;
+    padding: 20px;
+    width: 100%;
+    text-align: center;
+   
+}
+
+.container{
+    position: absolute;
+    z-index: 1000;
+    width: 100%;
+    max-width: 1000px;
+    padding: 50px;
+    background: rgba(225, 225, 225, 0.1);
+    box-shadow: 0 25px 45px rgba(0,0,0,0.1);
+    border: 1px solid rgba(225, 225, 225, 0.25);
+    border-right: 1px solid rgba(225, 225, 225, 0.1);
+    border-bottom: 1px solid rgba(225, 225, 225, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    backdrop-filter: blur(25px);
+    border: 2px solid #00ffff;
+
+}
+
+.container h2{
+    width: 100%;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+.container .row100{
+    position: relative;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
+}
+.container .row100 .col{
+    position: relative;
+    width: 100%;
+    padding: 0 10px;
+    margin: 30px 0 20px;
+    
+}
+.container .row100 .col .inputBox{
+    position: relative;
+    width: 100%;
+    color: #fff;
+    height: 40px;
+}
+
+
+.container .row100 .col .inputBox input,
+.container .row100 .col .inputBox textarea{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    box-shadow: none;
+    border: none;
+    outline: none;
+    font-size: 15px;
+    padding: 0 10px;
+    z-index: 1;
+    color: rgb(17, 1, 17);
+    font-weight: bold;
+}
+.container .row100 .col .inputBox .text{
+    position: absolute;
+    top: 0;
+    left: 0;
+    line-height: 40px;
+    font-size: 18px;
+    padding: 0 10px;
+    display: block;
+    transition: 0.5s;
+    pointer-events: none;
+}
+
+.container .row100 .col .inputBox input:focus + .text,
+.container .row100 .col .inputBox input:valid + .text,
+.container .row100 .col .inputBox textarea:focus + .text,
+.container .row100 .col .inputBox textarea:valid + .text{
+    top: -35px;
+    left: -10px;
+}
+
+.container .row100 .col .inputBox .line{
+    position: absolute;
+    bottom: 0;
+    display: block;
+    width: 100%;
+    height: 2px;
+    background: #00ff00;  
+    transition: 0.5s;
+    border-radius: 2px;
+    pointer-events: none;
+}
+.container .row100 .col .inputBox input:focus ~ .line,
+.container .row100 .col .inputBox input:valid ~ .line{
+height: 100%;
+
+}
+.container .row100 .col .inputBox textarea:focus ~ .line,
+.container .row100 .col .inputBox textarea:valid ~ .line{
+height: 100%;
+
+}
+.container .row100 .col .inputBox.textarea{
+    position: relative;
+    width: 100%;
+    height: 100px;
+    padding: 10px 0;
+}
+.container .row100 .col input[type="submit"]{
+    border: none;
+    padding: 10px 40px;
+    cursor: pointer;
+    outline: none;
+    background: rgba(225, 225, 225, 0.1);;
+    color: #00ff00;
+    font-weight: 600;
+    font-size: 18px;
+    border-radius: 5px;
+    border: 2px solid cyan;
+   
+    
+}
+.container .row100 .col input[type="submit"]:hover{
+    background-color: #fff;
+    color: #000;
+}
+
+@media (max-width:768px) {
+    section::before{
+        transform: translate(-200px,-180px);
+
+    }
+    section::after{
+        transform: translate(220px,180px);
+
+    }
+    .container{
+        padding: 20px;
+    }
+    
+}

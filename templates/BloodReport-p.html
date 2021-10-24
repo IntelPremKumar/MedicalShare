@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>BloodReport</title>
+      <link rel="stylesheet" href="../static/css/nav.css">
+      <link rel="stylesheet" href="../static/css/profile.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      
+   </head>
+   <body>
+      <nav>
+         <div class="logo">
+            Med<a style="color: cyan;">Share</a>
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul style="top: 70px;">
+            <li><a href="http://127.0.0.1:5000/profile">Profile</a></li>
+            <li><a  href="http://127.0.0.1:5000/basic">Basic</a></li>
+            <li><a class="active" href="http://127.0.0.1:5000/BloodReport">Blood Report</a></li>
+            <li><a href="http://127.0.0.1:5000/reports">Reports</a></li>
+            <li><a href="http://127.0.0.1:5000/observation">Observations</a></li>
+            <li><a  href="http://127.0.0.1:5000/home"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+         </ul>
+      </nav>
+      <div class="container">
+        <div class="title" style="text-align: center;">Blood Report</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Blood Group</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">WBC Count</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">RBC Count</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Platelet Count</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Hemoglobin</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Albumin</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Bilirubin</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Total Protien</span>
+                <input type="text" required>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+   </body>
+</html>

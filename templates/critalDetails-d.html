@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>CRITICAL DETAILS</title>
+      <link rel="stylesheet" href="../static/css/nav.css">
+      <link rel="stylesheet" href="../static/css/reports.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">      
+   </head>
+   <body>
+      <nav>
+         <div class="logo">
+            Med<a style="color: cyan;">Share</a>
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul style="top: 70px;">
+            <li><a href="">Profile</a></li>
+            <li><a href="">Enter Details</a></li>
+            <li><a class="active" href="">View Details</a></li>
+            <li><a href="">Critical</a></li>
+            <li><a href="">Observations</a></li>
+            <li><a  href="{{url_for('home')}}"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+         </ul>
+      </nav>
+      <div class="table-container">
+        <h1 class="heading">Critical Patients</h1>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>S.No</th>
+              <th>Patient Id</th>
+              <th>Name</th>
+              <th>critical Status</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td data-label="S.No">1</td>
+              <td data-label="Patient Id">12AC</td>
+              <td data-label="Name">Omana</td>
+              <td data-label="critical Status">	Full Blood Test</td>
+            </tr>
+            <tr>
+              <tr>
+                <td data-label="S.No">2</td>
+                <td data-label="Patient Id">13AC</td>
+                <td data-label="Name">Prem</td>
+                <td data-label="critical Status">Sugar Test</td>
+              </tr>
+          </tbody>
+        </table>
+      </div>
+      
+   </body>
+</html>

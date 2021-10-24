@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<!-- Created By CodingNepal -->
+<html lang="en" dir="ltr">
+   <head>
+      <meta charset="utf-8">
+      <title>PROFILE</title>
+      <link rel="stylesheet" href="../static/css/nav.css">
+      <link rel="stylesheet" href="../static/css/profile.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.0/jquery.min.js'></script>
+      <script>
+          $('document').ready(function(){
+  
+  var $file = $('#file-input'),
+      $label = $file.next('label'),
+      $labelText = $label.find('span'),
+      $labelRemove = $('i.remove'),
+      labelDefault = $labelText.text();
+  
+  // on file change
+  $file.on('change', function(event){
+    var fileName = $file.val().split( '\\' ).pop();
+		if( fileName ){
+      console.log($file)
+			$labelText.text(fileName);
+      $labelRemove.show();
+    }else{
+			$labelText.text(labelDefault);
+      $labelRemove.hide();
+    }
+  });
+  
+  // Remove file   
+  $labelRemove.on('click', function(event){
+    $file.val("");
+    $labelText.text(labelDefault);
+    $labelRemove.hide();
+    console.log($file)
+  });
+})
+      </script>
+
+<style>
+    .input-box #file-input{
+  display:none;
+  
+}
+
+
+
+
+
+.input-box i.remove{
+  vertical-align:middle;
+  margin-left: 5px;
+  cursor:pointer;
+  display:none;
+}
+</style>
+   </head>
+   <body>
+      <nav>
+         <div class="logo">
+            Med<a style="color: cyan;">Share</a>
+         </div>
+         <input type="checkbox" id="click">
+         <label for="click" class="menu-btn">
+         <i class="fas fa-bars"></i>
+         </label>
+         <ul style="top: 70px;">
+            <li><a class="active" href="">Profile</a></li>
+            <li><a href="">Enter Details</a></li>
+            <li><a href="">View Details</a></li>
+            <li><a href="">Critical</a></li>
+            <li><a href="">Observations</a></li>
+            <li><a  href="http://127.0.0.1:5000/home"><i class="fas fa-sign-out-alt"></i> Logout</a></li>
+         </ul>
+      </nav>
+      <div class="container">
+        <div class="title" style="text-align: center;">PROFILE</div>
+        <div class="content">
+          <form action="#">
+            <div class="user-details">
+              <div class="input-box">
+                <span class="details">Hospital Name</span>
+                <input type="text"  disabled> 
+                <input type="file" id="file-input">
+                <label for="file-input">
+                    <i class="fa fa-paperclip fa-1x"></i>
+                    <span></span>
+                </label>
+                <i class="fa fa-times-circle remove"></i>
+              </div>
+              <div class="input-box">
+                <span class="details">Owner Name</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Established Year</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Email</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Contact Number</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">HelpLine Number</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box">
+                <span class="details">Address</span>
+                <input type="text" required>
+              </div>
+              <div class="input-box" >
+                <span class="details">Website</span>
+                <input type="text" required> 
+              </div>
+            </div>
+            
+           <!--<div class="button">
+              <input type="submit" value="Register">
+            </div>--> 
+          </form>
+        </div>
+      </div>
+   </body>
+</html>
